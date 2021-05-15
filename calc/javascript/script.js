@@ -20,17 +20,11 @@ function Calculadora() {
             if (element.classList.contains('btn-eq')) this.solve()
         })
 
-        this.addNumDisplay = (el) => {
-            this.display.value += el.innerText
-        }
+        this.addNumDisplay = (el) => this.display.value += el.innerText
 
-        this.clear = () => {
-            this.display.value = ''
-        }
+        this.clear = () => this.display.value = ''
 
-        this.delete = () => {
-            this.display.value = this.display.value.slice(0, -1)
-        }
+        this.delete = () => this.display.value = this.display.value.slice(0, -1)
 
         this.solve = () => {
             const eq = this.display.value
